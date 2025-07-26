@@ -30,3 +30,29 @@ INVALID_INGREDIENTS = [
     "invalid_id_1",
     "invalid_id_2"
 ]
+
+# Вынес payload и ожидаемые сообщения из тестов создания заказа
+ORDER_PAYLOAD_WITH_INGREDIENTS = {
+    "ingredients": VALID_INGREDIENTS
+}
+
+ORDER_PAYLOAD_WITH_SOME_INGREDIENTS = {
+    "ingredients": ["61c0c5a71d1f82001bdaaa6d", "61c0c5a71d1f82001bdaaa6f"]
+}
+
+ORDER_PAYLOAD_NO_INGREDIENTS = {
+    "ingredients": []
+}
+
+ORDER_ERROR_MESSAGE_NO_INGREDIENTS = "Ingredient ids must be provided"
+ORDER_ERROR_STATUS_CODES = [400, 500]
+USER_ERROR_MESSAGE_ALREADY_EXISTS = "User already exists"
+USER_ERROR_MESSAGE_REQUIRED_FIELDS = "Email, password and name are required fields"
+USER_ERROR_STATUS_CODES = [400, 403]
+INVALID_LOGIN_USER = {
+    "email": "wrong_email@example.com",
+    "password": "wrongpassword"
+}
+
+LOGIN_ERROR_MESSAGE_INVALID_CREDENTIALS = "email or password are incorrect"
+LOGIN_ERROR_STATUS_CODE = 401
